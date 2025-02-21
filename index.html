@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adam Amar - Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="dark-mode">
+    <header>
+      <div class="container">
+        <h1>Adam Amar</h1>
+        <button id="menu-toggle" class="menu-toggle">☰</button>
+        <nav>
+          <ul id="nav-menu" class="nav-menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <button id="theme-toggle">Toggle Theme</button>
+      </div>
+    </header>
+
+    <!-- Hero Section Starts -->
+    <section id="hero">
+      <div class="hero-container">
+        <h2>Creative Developer & Designer</h2>
+        <p>Building sleek, responsive, and user-friendly web experiences.</p>
+        <a href="#projects" class="cta">View My Work</a>
+      </div>
+    </section>
+    <!-- Hero Section Ends -->
+
+    <!-- About Section Starts -->
+    <section id="about">
+      <div class="about-content">
+        <h2>Hi there 🙋🏼‍♂️</h2>
+        <p>
+          I'm a passionate <span>Web Developer</span> with a strong focus on
+          modern <span class="nd-span">UI/UX</span> and
+          <span class="rd-span">Interactive Design</span>.
+        </p>
+      </div>
+      <div class="about-image">
+        <img id="profile-pic" src="/mnt/data/Laptop.jpeg" alt="Adam Amar" />
+      </div>
+    </section>
+    <!-- About Section Ends -->
+
+    <!-- Project Section Starts -->
+    <section id="projects">
+      <div class="proj-container">
+        <h2>Projects</h2>
+        <div class="project-tabs">
+          <button class="tab-button active" data-category="wordpress">
+            WordPress Websites
+          </button>
+          <button class="tab-button" data-category="coding">
+            Coding-Based Websites
+          </button>
+          <button class="tab-button" data-category="webapps">
+            Web Applications
+          </button>
+        </div>
+        <div class="projects-grid" id="project-content">
+          <!-- Default projects will be loaded here -->
+        </div>
+      </div>
+    </section>
+    <!-- Project Section Ends -->
+
+    <section id="skills">
+      <div class="container">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Tailwind CSS</li>
+          <li>SEO Optimization</li>
+          <li>WordPress</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <p>Let's work together! Reach out to me via email or social media.</p>
+      </div>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
