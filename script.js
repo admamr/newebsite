@@ -76,14 +76,6 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("load", updateProfileImage);
   updateProfileImage();
 
-  // Hamburger Menu Toggle
-  const menuToggle = document.getElementById("menu-toggle");
-  const navMenu = document.getElementById("nav-menu");
-
-  menuToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
-  });
-
   // Project Tab Functionality
   const tabButtons = document.querySelectorAll(".tab-button");
   const projectContent = document.getElementById("project-content");
@@ -96,17 +88,22 @@ document.addEventListener("DOMContentLoaded", function () {
           "Designed and developed a sophisticated e-commerce platform for a luxury jewelry brand, ensuring a seamless and engaging shopping experience.Result: Increased customer engagement and sales growth through an immersive, visually stunning, and user-friendly online store",
         img: "./Projects/LaraJ.png",
         button: "Explore",
+        link: "https://larajewelry.co.il/",
       },
       {
         title: "Kickboxing & Training Gym Website",
         description:
           "Built a high-energy website for a kickboxing gym, delivering a bold, action-packed experience that attracts and converts visitors. Result: Increased membership sign-ups and engagement with an immersive, high-performance digital experience.Result: Increased membership sign-ups and engagement with an immersive, high-performance digital experience.",
         img: "./Projects/Mixmartialarts-.png",
+        button: "Explore",
+        link: "https://mix-martialarts.com/",
       },
       {
         title: "WordPress Site 3",
         description: "An e-commerce store.",
         img: "./Projects/RF.png",
+        button: "Explore",
+        link: "https://rfglobal.co.il/",
       },
     ],
     coding: [
@@ -136,32 +133,33 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   function loadProjects(category) {
+    if (!projectContent) return;
     projectContent.innerHTML = "";
     projects[category].forEach((project) => {
       const projectDiv = document.createElement("div");
       projectDiv.classList.add("project-card");
       projectDiv.innerHTML = `
-              <img src="${project.img}" alt="${project.title}" class="project-image">
-              <div class="project-info">
-                  <h3>${project.title}</h3>
-                  <p>${project.description}</p>
-                  <button>${project.button}</button>
-              </div>
-          `;
-      projectDiv.addEventListener("click", () => {
-        alert(`Opening: ${project.title}`);
-      });
+            <img src="${project.img}" alt="${project.title}" class="project-image">
+            <div class="project-info">
+                <h3>${project.title}</h3>
+                <p>${project.description}</p>
+                <a href="${project.link}" target="_blank"><button>${project.button}</button></a>
+            </div>
+        `;
       projectContent.appendChild(projectDiv);
     });
   }
 
-  tabButtons.forEach((button) => {
-    button.addEventListener("click", function () {
-      document.querySelector(".tab-button.active").classList.remove("active");
-      this.classList.add("active");
-      loadProjects(this.dataset.category);
+  if (tabButtons.length > 0) {
+    tabButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        document
+          .querySelector(".tab-button.active")
+          ?.classList.remove("active");
+        this.classList.add("active");
+        loadProjects(this.dataset.category);
+      });
     });
-  });
-
-  loadProjects("wordpress"); // Load default category
+    loadProjects("wordpress"); // Load default category
+  }
 });

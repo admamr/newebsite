@@ -380,7 +380,7 @@ nav ul li a:hover {
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin-bottom: 20px;
+  margin: 20px;
 }
 
 .tab-button {
@@ -390,12 +390,13 @@ nav ul li a:hover {
   border: none;
   cursor: pointer;
   transition: 0.3s;
-  border-radius: 5px;
+  border-radius: 10px 0;
 }
 
 .tab-button.active,
 .tab-button:hover {
-  background: #ff6600;
+  background: linear-gradient(#ffd89b, #19547b);
+  transition: all 1s ease-in-out;
 }
 
 .projects-grid {
@@ -409,9 +410,10 @@ nav ul li a:hover {
 .project-card {
   width: 100%;
   max-width: 1200px;
-  background: #1e1e1e;
+  background: rgba(70, 70, 70, 0.2);
+  backdrop-filter: blur(10px);
   padding: 20px;
-  border-radius: 15px;
+  border-radius: 25px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -422,7 +424,7 @@ nav ul li a:hover {
   left: 50%;
   transform: translateX(-50%) scale(0.9);
   opacity: 1;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .project-card:nth-child(1) {
@@ -500,8 +502,14 @@ nav ul li a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .project-tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
   .tab-button {
-    padding: 8px 15px;
+    font-size: 10px;
+    font-weight: 500;
   }
 
   .projects-grid {
@@ -512,9 +520,16 @@ nav ul li a:hover {
     flex-direction: column;
     position: static;
     width: 100%;
+    background: rgba(70, 70, 70, 0.2);
+    backdrop-filter: blur(10px);
     transform: scale(1);
     opacity: 1;
     text-align: center;
+    transition: transform 0.5 ease-in-out;
+  }
+
+  .project-card:hover {
+    transform: scale(1);
   }
 
   .project-image {
@@ -527,5 +542,9 @@ nav ul li a:hover {
     width: 100%;
     text-align: center;
     padding: 10px;
+  }
+
+  .project-info p {
+    color: #fbffe4;
   }
 }
