@@ -91,14 +91,22 @@ document.addEventListener("DOMContentLoaded", function () {
   const projects = {
     wordpress: [
       {
-        title: "WordPress Site 1",
-        description: "A sleek business website.",
+        title: "Elegant Jewelry E-Commerce Store  ",
+        description:
+          "Designed and developed a sophisticated e-commerce platform for a luxury jewelry brand, ensuring a seamless and engaging shopping experience.Result: Increased customer engagement and sales growth through an immersive, visually stunning, and user-friendly online store",
         img: "./Projects/LaraJ.png",
+        button: "Explore",
       },
       {
-        title: "WordPress Site 2",
-        description: "An e-commerce store.",
+        title: "Kickboxing & Training Gym Website",
+        description:
+          "Built a high-energy website for a kickboxing gym, delivering a bold, action-packed experience that attracts and converts visitors. Result: Increased membership sign-ups and engagement with an immersive, high-performance digital experience.Result: Increased membership sign-ups and engagement with an immersive, high-performance digital experience.",
         img: "./Projects/Mixmartialarts-.png",
+      },
+      {
+        title: "WordPress Site 3",
+        description: "An e-commerce store.",
+        img: "./Projects/RF.png",
       },
     ],
     coding: [
@@ -137,6 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <div class="project-info">
                   <h3>${project.title}</h3>
                   <p>${project.description}</p>
+                  <button>${project.button}</button>
               </div>
           `;
       projectDiv.addEventListener("click", () => {
