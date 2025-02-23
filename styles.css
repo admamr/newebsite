@@ -91,7 +91,8 @@ nav ul li a:hover {
 }
 
 .contact-cta:hover {
-  background: #008f97;
+  background-color: darkmagenta;
+  color: #fbffe4;
 }
 /* Responsive Header Mobile View */
 @media (max-width: 768px) and (min-width: 367px) {
@@ -191,14 +192,15 @@ nav ul li a:hover {
   color: #121212;
   font-weight: 600;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 15px 0;
   transition: background 0.3s ease;
   position: relative;
   z-index: 10;
 }
 
 .cta:hover {
-  background: #008f97;
+  background-color: darkmagenta;
+  color: #fbffe4;
 }
 
 /* Floating Background Animation */
@@ -301,6 +303,23 @@ nav ul li a:hover {
   }
 }
 
+.cv-cta {
+  width: 28%;
+  padding: 20px;
+  margin-top: 15px;
+  background: #00adb5;
+  color: #121212;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 15px 0;
+  transition: background 0.3s ease;
+}
+
+.cv-cta:hover {
+  background-color: darkmagenta;
+  color: #fbffe4;
+}
+
 .about-image {
   display: flex;
   justify-content: center;
@@ -349,6 +368,10 @@ nav ul li a:hover {
   .about-content p {
     font-size: 1rem;
   }
+
+  .cv-cta {
+    width: 40%;
+  }
   .about-image img {
     content: url("./Images/Tablet.jpeg");
     max-width: 250px;
@@ -368,6 +391,12 @@ nav ul li a:hover {
   }
   #about p {
     font-size: 1rem;
+  }
+  .cv-cta {
+    width: 70%;
+    padding: 20px;
+    font-size: 10px;
+    font-weight: 600;
   }
 }
 
@@ -502,7 +531,8 @@ nav ul li a:hover {
 }
 
 .project-info button:hover {
-  background: #008f97;
+  background-color: darkmagenta;
+  color: #fbffe4;
 }
 
 /* Responsive Design */
