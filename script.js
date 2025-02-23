@@ -1,22 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Theme Toggle Functionality
-  const themeToggle = document.getElementById("theme-toggle");
-  const body = document.body;
-
-  themeToggle.addEventListener("click", () => {
-    body.classList.toggle("light-mode");
-    if (body.classList.contains("light-mode")) {
-      localStorage.setItem("theme", "light");
-    } else {
-      localStorage.setItem("theme", "dark");
-    }
-  });
-
-  // Load Theme Preference from Local Storage
-  if (localStorage.getItem("theme") === "light") {
-    body.classList.add("light-mode");
-  }
-
   // Change Profile Image Based on Screen Size
   function updateProfileImage() {
     const profilePic = document.getElementById("profile-pic");
@@ -42,24 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 document.addEventListener("DOMContentLoaded", function () {
-  // Theme Toggle Functionality
-  const themeToggle = document.getElementById("theme-toggle");
-  const body = document.body;
-
-  themeToggle.addEventListener("click", () => {
-    body.classList.toggle("light-mode");
-    if (body.classList.contains("light-mode")) {
-      localStorage.setItem("theme", "light");
-    } else {
-      localStorage.setItem("theme", "dark");
-    }
-  });
-
-  // Load Theme Preference from Local Storage
-  if (localStorage.getItem("theme") === "light") {
-    body.classList.add("light-mode");
-  }
-
   // Change Profile Image Based on Screen Size
   function updateProfileImage() {
     const profilePic = document.getElementById("profile-pic");
@@ -100,7 +64,8 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       {
         title: "WordPress Site 3",
-        description: "An e-commerce store.",
+        description:
+          "Built a high-energy website for a kickboxing gym, delivering a bold, action-packed experience that attracts and converts visitors. Result: Increased membership sign-ups and engagement with an immersive, high-performance digital experience.Result: Increased membership sign-ups and engagement with an immersive, high-performance digital experience.",
         img: "./Projects/RF.png",
         button: "Explore",
         link: "https://rfglobal.co.il/",
